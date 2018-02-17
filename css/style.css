@@ -216,9 +216,9 @@ main span {
 }
 main .updates {
     width: 100%;
-    margin: 20px;
+    margin: 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: left;
     flex-wrap: wrap;
 }
@@ -313,6 +313,166 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     color: #ffffff;
     font-size: 12px;
 }
+
+/*?________PALAY__CINEMA_________*/
+
+
+.play {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.play .about__cinema {
+    flex-basis: 25%;
+    background: url(../img/bg_dark.png) repeat;
+    text-align: left;
+    color: #ffffff;
+    font-size: 12px;
+}
+.play .about__cinema h5 {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+}
+.play .about__cinema p {
+    padding: 5px;
+}
+.play .about__cinema .cinema__other {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #141414;
+    border-top: 1px solid #141414;
+}
+.play .about__cinema .cinema__other .other__items {
+    flex-basis: 50%;
+    padding: 5px;
+}
+.play .about__cinema .cinema__other .other__items h6 {
+    font-size: 12px;
+    font-weight: 700;
+    
+}
+
+
+.play .cinema__play {
+    flex-basis: 50%;
+    padding: 5px;
+}
+.play .cinema__play table {
+    padding: 20px;
+    color: #000000;
+    font-size: 11px;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.play .cinema__play table td{
+    padding: 10px;
+}
+.play .cinema__play .title__cinema__bold {
+    font-weight: bold;
+}
+.play .cinema__play .big__title__cinema {
+    font-size: 20px;
+}
+.play .cinema__play .cinema__play__player {
+    position: relative;
+    background: #ffffff;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+}
+.play .cinema__play .cinema__play__player img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.play .cinema__play .cinema__play__player .btn_player {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    right: 10px;
+}
+
+.play aside {
+    flex-basis: 25%;
+    border: 1px solid red;
+    background: url(../img/bg_dark.png) repeat;
+}
+
+.play aside {
+    color: #ffffff;
+}
+.play aside h5 {
+    background: url(../img/icon_cinema.png) no-repeat center;
+}
+.play aside table {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+}
+.play aside table .red__number {
+    color: red;
+}
+.play aside table .silver {
+    color: #736d6d;
+    font-size: 11px;
+}
+.play aside ul {
+    color: #f42158;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.5;
+}
+.play aside ul li {
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+
+/*_________FOOTER________*/
+
+footer {
+    position: relative;
+    background: url(../img/bg_dark.png) repeat;
+    padding-top: 30px;
+}
+footer .corner__footer {
+    position: absolute;
+    top:-58px;
+    right: 170px;
+}
+footer .link__footer ul {
+    color: #736d6d;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer .link__footer ul li a{
+    color: #ffffff;
+    font-size: 12px;
+}
+footer .link__footer ul li a:hover {
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:1150px) {
