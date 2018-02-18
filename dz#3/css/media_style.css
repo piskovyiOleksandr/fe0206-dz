@@ -17,6 +17,22 @@
     main .updates .updates__poster {
         width: 50%;
     }
+    .play .about__cinema {
+        flex-basis: 50%;
+    }
+    .play .cinema__play {
+        order: 1;
+        flex-basis: 100%;
+    }
+    .play aside {
+        flex-basis: 50%;
+    }
+    footer .link__footer {
+        flex-basis: 25%;
+    }
+    .play aside ul {
+        width: 50%;
+    }
 }
 @media screen and (max-width:800px) {
     header .header__top nav{
@@ -26,6 +42,27 @@
         width: 50%;
     }
     .play .about__cinema, .play .cinema__play, .play aside {
+        flex-basis: 100%;
+    }
+    footer .link__footer {
+        flex-basis: 50%;
+    }
+    .play .about__cinema, .play .cinema__play, .play aside {
+        flex-basis:100%;
+    }
+    .play .cinema__play {
+        order: 0;
+    }
+    .play aside h5 {
+        text-align: left;
+        background: url(../img/icon_cinema.png) no-repeat left;
+    }
+    .play aside table {
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px) {
+        footer .link__footer {
         flex-basis: 100%;
     }
 }

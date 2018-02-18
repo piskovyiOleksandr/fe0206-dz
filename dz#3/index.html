@@ -87,6 +87,7 @@
                             <a class="" href="#">Смотреть сейчас</a>
                         </div>
                         <img src="img/stars.png" alt="" class="updates__poster-stars">
+                        <img class="updates__poster-corner" src="img/corner_bottom.png" alt="error">
                     </div>
                     <div class="updates__poster">
                         <h3>Авраам Линкольн: Охотник на вампиров (2012)</h3>
@@ -96,6 +97,7 @@
                             <a class="" href="#">Смотреть сейчас</a>
                         </div>
                         <img src="img/stars.png" alt="" class="updates__poster-stars">
+                        <img class="updates__poster-corner" src="img/corner_bottom.png" alt="error"> 
                     </div>
                     <div class="updates__poster">
                         <h3>Темный рыцарь: Возрождение легенды</h3>
@@ -105,6 +107,7 @@
                             <a class="" href="#">Смотреть сейчас</a>
                         </div>
                         <img src="img/stars.png" alt="" class="updates__poster-stars">
+                        <img class="updates__poster-corner" src="img/corner_bottom.png" alt="error">
                     </div>
                     <div class="updates__poster menu__poster">
                         <h2>Обновление <span>на сайте</span></h2>
@@ -132,7 +135,9 @@
                 </div>
             </div>
             <div class="content__beetwen">
-                <div class="play">
+<!--------Десь накосячив у цьому блоці (PLAY), не знаю де. Через цей косяк не вдається зробити блок .reviews, бо все  кудись тікаєю. Напевне десь не правельно використав flexbox. Також в цьому блоці не вдається більш-менш нормально адаптувати. Думаю це також через цей косяк ----->
+                   
+                    <div class="play">
                     <div class="about__cinema">
                         <img class="mechanic" src="img/mechanic.png" alt="error">
                         <div class="cinema__actors">
@@ -204,10 +209,16 @@
                             <img src="img/mechanic_play.png" alt="error">
                             <img src="img/btn_play.png" alt="error" class="btn_player">
                         </div>
+        
+<!----Косяк---->
                         <div class="cinema__play__reviews">
                             <div class="review">
-                                <img src="img/avatar.png" alt="error">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis reiciendis obcaecati autem amet. At sapiente id quisquam unde, nam rerum.</p>
+                                <div class="user__avatar">
+                                    <img src="img/avatar.png" alt="error">
+                                </div>
+                                <div class="user__reviews">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis reiciendis obcaecati autem amet. At sapiente id quisquam unde, nam rerum.
+                                </div>
                             </div>
                             <div class="review">
                                 <img src="img/avatar.png" alt="error">
@@ -219,7 +230,7 @@
                         </div>
                     </div>
                     <aside>
-                        <h5>Киннокаса России</h5>
+                        <h5 class="touching">Киннокаса России</h5>
                         <table>
                             <tr>
                                 <td class="red__number" colspane="2">1.</td><td>Люди в черном 3</td><td colspan="2">533 050 190</td>
@@ -252,44 +263,44 @@
                                 <td></td><td class="silver">The Avengers</td><td></td>
                             </tr>
                         </table>
-                        <h5>Последние коментарии</h5>
+                        <h5 class="latest__comments">Последние коментарии</h5>
                         <ul>Рыцарь дня
                             <li>Давно пройшли часи лицарства і героїзму, коли лише за посмішку благородної дами творилися подвиги. Крістофер Нолан вдихнув нове життя в філософію рицарства.</li>
                         </ul>
                         <ul>Неудержымые
                             <li>Нестримні/The Expendables - Хоч про це вже казано і переказано, але...Сталоне, Стетхем, Джет Лі, Брюс Віліс, Мікі Рурк, Арнольд Шварцнегер у одному фільмі. Ви колись таке чули чи бачили? </li>
                         </ul>
-                        <h5>Запросы Фильмы</h5>
+                        <h5 class="queries">Запросы Фильмы</h5>
                         <table>
                             <tr>
                                 <td colspan="2">Прометей</td><td></td>
                             </tr>
                             <tr>
-                                <td>Prometheus</td><td>31.05</td>
+                                <td class="silver">Prometheus</td><td>31.05</td>
                             </tr>
                              <tr>
                                 <td colspan="2">Мадагаскар 3</td><td></td>
                             </tr>
                             <tr>
-                                <td>Madagascar 3: Europe's Most Wanted</td><td>07.06</td>
+                                <td class="silver">Madagascar 3: Europe's Most Wanted</td><td>07.06</td>
                             </tr>
                              <tr>
                                 <td colspan="2">Белоснежка и охотник</td><td></td>
                             </tr>
                             <tr>
-                                <td>Snow White and the Huntsman</td><td>14.06</td>
+                                <td class="silver">Snow White and the Huntsman</td><td>14.06</td>
                             </tr>
                              <tr>
                                 <td colspan="2">Президент Линкольн: Охотник на вампиров</td><td></td>
                             </tr>
                             <tr>
-                                <td>Abraham Lincoln: Vampire Hunter</td><td>21.06</td>
+                                <td class="silver">Abraham Lincoln: Vampire Hunter</td><td>21.06</td>
                             </tr>
                              <tr>
                                 <td colspan="2">Лето. Одноклассники. Любовь</td><td></td>
                             </tr>
                             <tr>
-                                <td>LOL</td><td>28.06</td>
+                                <td class="silver">LOL</td><td>28.06</td>
                             </tr>
                              <tr>
                                 <td colspan="2"></td><td></td>
@@ -298,6 +309,12 @@
                                 <td></td><td></td>
                             </tr>
                         </table>
+                        <div class="random__film">
+                            Случайный фильм
+                            <img src="img/sea.png" alt="error">
+                            <a class="name__film" href="#">Морской бой</a>
+                            <a href="#">Другой случайный фильм</a>
+                        </div>
                     </aside>
                 </div>
             </div>

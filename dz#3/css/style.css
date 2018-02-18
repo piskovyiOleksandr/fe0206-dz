@@ -14,6 +14,8 @@
     flex-wrap: wrap;
 }
 
+/*_________HEADER________*/
+
 header {
     width: 100%;
 }
@@ -61,8 +63,6 @@ header .header__top nav li a:hover {
     color: #ffffff;
     font-size: 16px;
 }
-
-
 header .header__bottom {
     width: 100%;
     background: url(../img/bg_blue.png) repeat;
@@ -196,9 +196,13 @@ header .header__bottom .search input[type=search]{
     display: inline-block;
     width: 95px;
     height: 45px;
-    
     border: 1px solid #ffffff;
+    transition: all 0.7s linear;
 }
+.all__slider .slider__slider .slider__slider-description .slider__slider-description-pictures img:hover {
+    transform: scale(2);
+}
+/*Хочу уточнити чи правельна така форма назв класів? Бо якщо чесно виходять дуже великі, але чув що краще називати так, типу так називають по методиці БЕМ. Що використовується насправді в роботі? як краще?*/
 
 
 /*_________ALL__POSTER_______*/
@@ -271,6 +275,14 @@ main .updates .updates__poster .updates__poster-stars {
     right: 5px;
     width: 125px;
     height: 17px;
+    border: none;
+}
+main .updates .updates__poster .updates__poster-corner {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    bottom: 173px;
+    left: 5px;
     border: none;
 }
 main .updates .menu__poster {
@@ -364,6 +376,8 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     
 }
 
+/*________CINEMA__PLAY_______*/
+
 
 .play .cinema__play {
     flex-basis: 50%;
@@ -406,22 +420,33 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
 }
 .play .cinema__play .cinema__play__reviews {
     text-align: left;
-    background: red;
 }
-.play .cinema__play .cinema__play__reviews .review {
-
+.play .cinema__play .cinema__play__reviews a{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    background: #2033d0;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .play .cinema__play .cinema__play__reviews .reviews textarea {
 
 }
 
+
+
+/*__________ASIDE_______*/
+
 .play aside {
     flex-basis: 25%;
-    border: 1px solid red;
     background: url(../img/bg_dark.png) repeat;
 }
-
+.touching, .latest__comments, .queries {
+    margin: 20px 0 10px 0;
+}
 .play aside {
     color: #ffffff;
 }
@@ -435,7 +460,7 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     line-height: 1.5;
 }
 .play aside table .red__number {
-    color: red;
+    color: #f42158;
 }
 .play aside table .silver {
     color: #736d6d;
@@ -447,11 +472,38 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     font-weight: bold;
     text-align: left;
     line-height: 1.5;
+    padding: 5px;
 }
 .play aside ul li {
     font-size: 11px;
     color: #ffffff;
     font-weight: 100;
+}
+
+.play aside .random__film {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 3px solid #1d1d1d;
+    color: #313131;
+}
+.play aside .random__film .name__film {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #ffffff;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+}
+.play aside .random__film a {
+    text-decoration: none;
+    text-transform:lowercase;
+    font-size: 12px;
+    color: #ffffff;
 }
 
 
@@ -466,6 +518,9 @@ footer .corner__footer {
     top:-58px;
     right: 170px;
 }
+footer .link__footer{
+    flex-basis: 11%;   
+}
 footer .link__footer ul {
     color: #736d6d;
     font-size: 14px;
@@ -478,4 +533,5 @@ footer .link__footer ul li a{
 footer .link__footer ul li a:hover {
     color: #000000;
 }
+
 
