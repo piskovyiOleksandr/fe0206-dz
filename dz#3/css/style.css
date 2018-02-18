@@ -205,11 +205,11 @@ header .header__bottom .search input[type=search]{
 
 main{
     width: 100%;
-    height: 1340px;
     background: url(../img/bg_white.png) repeat;
     text-align: center;
     padding-top: 30px;
     color: #202020;
+    padding-bottom: 50px;
 }
 main span {
     font-weight: bold;
@@ -261,6 +261,10 @@ main .updates .updates__poster .watch__now a {
     padding: 5px 10px;
     border-radius: 5px;
 }
+main .updates .updates__poster .watch__now a:hover{
+    color: #000000;
+    background: #d01d1d;   
+}
 main .updates .updates__poster .updates__poster-stars {
     position: absolute;
     top: 75px;
@@ -276,6 +280,7 @@ main .updates .menu__poster {
     border-radius: 5px;
     padding: 10px;
     font-size: 10px;
+    text-shadow: none;
 }
 main .updates .menu__poster .all__updates {
     color: #ffffff;
@@ -399,6 +404,17 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     top: 10px;
     right: 10px;
 }
+.play .cinema__play .cinema__play__reviews {
+    text-align: left;
+    background: red;
+}
+.play .cinema__play .cinema__play__reviews .review {
+
+}
+
+.play .cinema__play .cinema__play__reviews .reviews textarea {
+
+}
 
 .play aside {
     flex-basis: 25%;
@@ -416,6 +432,7 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     width: 100%;
     text-align: left;
     font-size: 12px;
+    line-height: 1.5;
 }
 .play aside table .red__number {
     color: red;
@@ -501,6 +518,9 @@ footer .link__footer ul li a:hover {
     }
     main .updates .updates__poster {
         width: 50%;
+    }
+    .play .about__cinema, .play .cinema__play, .play aside {
+        flex-basis: 100%;
     }
 }
   
