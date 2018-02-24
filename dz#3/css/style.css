@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +8,7 @@
     background: url(../img/bg_main.png) repeat;
 }
 .content__beetwen {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -128,6 +129,17 @@ header .header__bottom .search input[type=search]{
 
 .all__slider {
     width: 100%;
+    position: relative;
+}
+.all__slider:after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 90px;
+    background: url(../img/corner_slider_bottom.png) no-repeat center;
+    position: absolute;
+    left: 230px;
+    bottom: -33px;
 }
 .all__slider .slider__top {
     width: 100%;
@@ -146,8 +158,8 @@ header .header__bottom .search input[type=search]{
     height: 290px;
     background: #c5c5c5;
     box-sizing: border-box;
-    border-top: 1px solid #5c5c5c;
-    border-bottom: 1px solid #5c5c5c;
+    border-top: 2px solid #cecece;
+    border-bottom: 2px solid #cecece;
     padding: 10px 0;
 }
 .all__slider .slider__slider img {
@@ -155,11 +167,32 @@ header .header__bottom .search input[type=search]{
     height: 100%;
 }
 .all__slider .slider__slider .slider__slider-description {
-    width: 310px;
+    max-width: 310px;
     position: absolute;
     top: 20px;
     left: 810px;
     line-height: 1.5;
+}
+.all__slider .slider__slider .slider__slider-description:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/corner_slider_top.png) no-repeat center;
+    position: absolute;
+    bottom: 202px;
+    left: 255px;
+}
+.all__slider .slider__slider .slider__slider-description:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/corner_slider_left.png) no-repeat center;
+    position: absolute;
+    top: 70px;
+    left: -18px;
+    z-index: 999;
 }
 .all__slider .slider__slider .slider__slider-description .slider__slider-description-text{
     background: rgba(0, 0, 0, 0.7);
@@ -205,10 +238,12 @@ header .header__bottom .search input[type=search]{
 /*Хочу уточнити чи правельна така форма назв класів? Бо якщо чесно виходять дуже великі, але чув що краще називати так, типу так називають по методиці БЕМ. Що використовується насправді в роботі? як краще?*/
 
 
+
 /*_________ALL__POSTER_______*/
 
+
 main{
-    width: 100%;
+    max-width: 1350px;
     background: url(../img/bg_white.png) repeat;
     text-align: center;
     padding-top: 30px;
@@ -219,12 +254,23 @@ main span {
     font-weight: bold;
 }
 main .updates {
+    position: relative;
     width: 100%;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
     text-align: left;
     flex-wrap: wrap;
+}
+main .updates::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 180px;
+    background: url(../img/renewal.png) no-repeat center;
+    position: absolute;
+    top: 70px;
+    left: -60px;
 }
 main .updates .updates__poster {
     position: relative;
@@ -242,8 +288,8 @@ main .updates .updates__poster h3{
     font-size: 12px;
 }
 main .updates .updates__poster img {
-    height: 150px;
-    width: 100%;
+    height: auto;
+    max-width: 100%;
     border: 3px solid silver;
 }
 main .updates .updates__poster p {
@@ -264,6 +310,8 @@ main .updates .updates__poster .watch__now a {
     background: #252525;
     padding: 5px 10px;
     border-radius: 5px;
+   box-shadow: 10px 10px 30px 5px #B8B8B8;
+
 }
 main .updates .updates__poster .watch__now a:hover{
     color: #000000;
@@ -292,7 +340,6 @@ main .updates .menu__poster {
     border-radius: 5px;
     padding: 10px;
     font-size: 10px;
-    text-shadow: none;
 }
 main .updates .menu__poster .all__updates {
     color: #ffffff;
@@ -302,10 +349,11 @@ main .updates .menu__poster .all__updates {
 }
 main .updates .menu__poster h2{
     margin-top: 10px;
+    height: 50px;
     color: #ffffff;
-    background: #000000;
+    background: url(../img/icon_cinema.png) no-repeat center;
     text-align: right;
-    padding: 5px 10px 5px 0;
+    padding: 15px 10px 0 0;
     font-size: 14px;
 }
 main .updates .menu__poster span {
@@ -316,7 +364,7 @@ main .updates .menu__poster .menu__poster-cinema {
     display: flex;
     justify-content: space-around;
     color: #ffffff;
-    border-bottom: 1px solid #020202;
+    border-bottom: 1px solid #121212;
 }
 main .updates .menu__poster .menu__poster-cinema .cinema__img img {
     width: 60px;
@@ -331,23 +379,19 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     font-size: 12px;
 }
 
-/*?________PALAY__CINEMA_________*/
+/*_________PALAY__CINEMA_________*/
 
 
-.play {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.play .about__cinema {
+
+.about__cinema {
+    margin: 20px 0;
     flex-basis: 25%;
     background: url(../img/bg_dark.png) repeat;
     text-align: left;
     color: #ffffff;
     font-size: 12px;
 }
-.play .about__cinema h5 {
+.about__cinema h5 {
     width: 100%;
     padding: 5px;
     font-size: 14px;
@@ -356,21 +400,21 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     border-bottom: 1px solid #141414;
     border-top: 1px solid #141414;
 }
-.play .about__cinema p {
+.about__cinema p {
     padding: 5px;
 }
-.play .about__cinema .cinema__other {
+.about__cinema .cinema__other {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid #141414;
     border-top: 1px solid #141414;
 }
-.play .about__cinema .cinema__other .other__items {
+.about__cinema .cinema__other .other__items {
     flex-basis: 50%;
     padding: 5px;
 }
-.play .about__cinema .cinema__other .other__items h6 {
+.about__cinema .cinema__other .other__items h6 {
     font-size: 12px;
     font-weight: 700;
     
@@ -379,11 +423,27 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
 /*________CINEMA__PLAY_______*/
 
 
-.play .cinema__play {
+.cinema__play {
+    max-width: 100%;
+    position: relative;
+    margin: 20px 0;
     flex-basis: 50%;
     padding: 5px;
 }
-.play .cinema__play table {
+.cinema__play::before {
+    content: '9.5/10';
+    display: block;
+    width: 90px;
+    height: 80px;
+    background: url(../img/stars_play.png) no-repeat center;
+    text-align: right;
+    color: #c62a67;
+    font-weight: bold;
+    position: absolute;
+    left: 350px;
+}
+.cinema__play table {
+    max-width: 100%;
     padding: 20px;
     color: #000000;
     font-size: 11px;
@@ -391,37 +451,102 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     background: #ffffff;
     border-radius: 5px;
 }
-.play .cinema__play table td{
+.cinema__play table td{
     padding: 10px;
 }
-.play .cinema__play .title__cinema__bold {
+.cinema__play .title__cinema__bold {
     font-weight: bold;
 }
-.play .cinema__play .big__title__cinema {
+.cinema__play .big__title__cinema {
     font-size: 20px;
 }
-.play .cinema__play .cinema__play__player {
+.cinema__play .cinema__play__player {
+    max-width: 650px;
     position: relative;
     background: #ffffff;
     margin: 10px 0 20px 0;
     border-radius: 5px;
 }
-.play .cinema__play .cinema__play__player img {
+.cinema__play .cinema__play__player img {
     width: 100%;
-    height: auto;
     padding: 10px;
 }
-.play .cinema__play .cinema__play__player .btn_player {
+
+.cinema__play .cinema__play__player .btn_player {
     position: absolute;
     width: 100px;
     height: 100px;
     top: 10px;
     right: 10px;
 }
-.play .cinema__play .cinema__play__reviews {
+.cinema__play .cinema__play__reviews {
+    
+}
+.cinema__play .cinema__play__reviews .review__one {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cinema__play .cinema__play__reviews .review__one .user__avatar {
+    flex-basis: 70px;
+    height: 70px;
+}
+.cinema__play .cinema__play__reviews .review__one .user__review {
+    background: url(../img/bg_dark.png) repeat;
+    flex-basis: 370px;
+    height: 70px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 5px 5px 5px;
+    border-radius: 5px;
+}
+.cinema__play .cinema__play__reviews .review__one .user__review .user__name__and__date {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #121212;
+}
+.cinema__play .cinema__play__reviews .review__two {
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.cinema__play .cinema__play__reviews .review__two .user__avatar {
+    flex-basis: 70px;
+    height: 70px;
+}
+.cinema__play .cinema__play__reviews .review__two .user__review {
+    background: #ffffff;
+    flex-basis: 300px;
+    height: 70px;
+    color: #000000;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 5px 5px 5px;
+    border-radius: 5px; 
+}
+.cinema__play .cinema__play__reviews .review__two .user__review .user__name__and__date {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.cinema__play .cinema__play__reviews .write__review {
+    width: 100%;
+    height: 90px;
+    background: #bbbbbb;
+    border-radius: 5px;
+    padding: 5px;
     text-align: left;
 }
-.play .cinema__play .cinema__play__reviews a{
+.cinema__play .cinema__play__reviews .write__review textarea {
+    width: 100%;
+    height: 50px;
+}
+
+.cinema__play .cinema__play__reviews a{
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
@@ -432,41 +557,39 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     border-radius: 5px;
 }
 
-.play .cinema__play .cinema__play__reviews .reviews textarea {
-
-}
-
 
 
 /*__________ASIDE_______*/
 
-.play aside {
+aside {
+    margin: 20px 0;
     flex-basis: 25%;
     background: url(../img/bg_dark.png) repeat;
+    color: #ffffff;
 }
 .touching, .latest__comments, .queries {
     margin: 20px 0 10px 0;
 }
-.play aside {
-    color: #ffffff;
-}
-.play aside h5 {
+
+aside h5 {
     background: url(../img/icon_cinema.png) no-repeat center;
+    height: 30px;
 }
-.play aside table {
+aside table {
     width: 100%;
     text-align: left;
     font-size: 12px;
     line-height: 1.5;
+    margin: 0 10px;
 }
-.play aside table .red__number {
+aside table .red__number {
     color: #f42158;
 }
-.play aside table .silver {
+aside table .silver {
     color: #736d6d;
     font-size: 11px;
 }
-.play aside ul {
+aside ul {
     color: #f42158;
     font-size: 12px;
     font-weight: bold;
@@ -474,13 +597,13 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     line-height: 1.5;
     padding: 5px;
 }
-.play aside ul li {
+aside ul li {
     font-size: 11px;
     color: #ffffff;
     font-weight: 100;
 }
 
-.play aside .random__film {
+aside .random__film {
     position: relative;
     text-transform: uppercase;
     font-size: 14px;
@@ -488,7 +611,7 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     border-top: 3px solid #1d1d1d;
     color: #313131;
 }
-.play aside .random__film .name__film {
+aside .random__film .name__film {
     position: absolute;
     left: 30px;
     bottom: 30px;
@@ -499,7 +622,7 @@ main .updates .menu__poster .menu__poster-cinema .cinema__text a {
     background: rgba(0, 0, 0, 0.5);
     padding: 15px 20px;
 }
-.play aside .random__film a {
+aside .random__film a {
     text-decoration: none;
     text-transform:lowercase;
     font-size: 12px;
@@ -533,5 +656,6 @@ footer .link__footer ul li a{
 footer .link__footer ul li a:hover {
     color: #000000;
 }
+
 
 

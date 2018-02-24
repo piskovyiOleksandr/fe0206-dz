@@ -12,25 +12,25 @@
     }
     main .updates  {
         margin: 0 50px;
-        width: 50%;
+        width: 100%;
     }
     main .updates .updates__poster {
         width: 50%;
     }
-    .play .about__cinema {
+    .about__cinema {
         flex-basis: 50%;
     }
-    .play .cinema__play {
+    .cinema__play {
         order: 1;
         flex-basis: 100%;
     }
-    .play aside {
+    aside {
         flex-basis: 50%;
     }
     footer .link__footer {
         flex-basis: 25%;
     }
-    .play aside ul {
+    aside ul {
         width: 50%;
     }
 }
@@ -41,28 +41,42 @@
     main .updates .updates__poster {
         width: 50%;
     }
-    .play .about__cinema, .play .cinema__play, .play aside {
+    .about__cinema, .play .cinema__play, .play aside {
         flex-basis: 100%;
     }
-    footer .link__footer {
-        flex-basis: 50%;
-    }
-    .play .about__cinema, .play .cinema__play, .play aside {
+
+    .about__cinema, .play .cinema__play, .play aside {
         flex-basis:100%;
     }
-    .play .cinema__play {
+    aside {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .cinema__play {
         order: 0;
     }
-    .play aside h5 {
+    aside h5 {
         text-align: left;
         background: url(../img/icon_cinema.png) no-repeat left;
     }
-    .play aside table {
+    aside table {
         width: 50%;
+    }
+    footer .link__footer {
+        flex-basis: 50%;
+        margin: 10px;
     }
 }
 @media screen and (max-width:600px) {
         footer .link__footer {
         flex-basis: 100%;
     }
+    
+}
+@media screen and (max-width:500px) {
+     main .updates .updates__poster {
+         margin-top: 10px;
+         width: 100%;
+    }
+   
 }
